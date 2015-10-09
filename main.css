@@ -6,9 +6,19 @@ body {
 }
 
 .container {
+    display: table;
     height: 100vh;
     width: 100%;
     background: #1b1b1b;
+    color: #f1f1f1;
+    text-align: center;
+    margin: 0px 0px;
+
+}
+
+.container h1, .container p {
+    position: table-cell;
+    vertical-align: middle;
     color: #f1f1f1;
     text-align: center;
 }
