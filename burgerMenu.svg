@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="15px" height="12px" viewBox="0 0 15 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="Menu" transform="translate(-656.000000, -983.000000)" fill="#fff" fill-rule="evenodd" stroke="none">
+            <path d="M656,985 L663.896118,985 L671,985 L671,983 L656,983 L656,985 L656,985 Z M656,990 L663.896118,990 L671,990 L671,988 L656,988 L656,990 L656,990 Z M656,995 L663.896118,995 L671,995 L671,993 L656,993 L656,995 L656,995 Z" id="burgerMenu"></path>
+        </g>
+</svg>
