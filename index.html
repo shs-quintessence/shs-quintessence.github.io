@@ -4,14 +4,35 @@
         <title>QUINTESSENCE</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;"/>
+        <link rel="stylesheet" href="load.css">
         <link rel="stylesheet" href="main.css">
         <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
         <script src="main.js"></script>
     </head>
     <body>
+        <div class="loader-wrap">
+            <div id="loader">
+                <svg viewBox="0 0 577 625" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Logo" transform="translate(-105.000000, -105.000000)" stroke="#000" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <path d="M393.5,681 C552.281866,681 681,552.281866 681,393.5 C681,234.718134 552.281866,106 393.5,106 C234.718134,106 106,234.718134 106,393.5 C106,552.281866 234.718134,681 393.5,681 Z" id="Q-fill" fill="#1980B9" transform="translate(393.500000, 393.500000) rotate(-30.000000) translate(-393.500000, -393.500000) "></path>
+                        <path d="M505.75,587.922703 L505.75,587.922703 C613.126694,525.92874 649.916666,388.626694 587.922703,281.25 C525.92874,173.873306 388.626694,137.083334 281.25,199.077297 C173.873306,261.07126 137.083334,398.373306 199.077297,505.75 C261.07126,613.126694 398.373306,649.916666 505.75,587.922703 L505.75,587.922703 L505.75,587.922703 Z M537.25,642.482304 L537.25,642.482304 C399.740871,721.873236 223.908629,674.759129 144.517696,537.25 C65.1267636,399.740871 112.240871,223.908629 249.75,144.517696 C387.259129,65.1267636 563.091371,112.240871 642.482304,249.75 C721.873236,387.259129 674.759129,563.091371 537.25,642.482304 L537.25,642.482304 L537.25,642.482304 Z" id="Q-outline" fill="#23AEF6"></path>
+                        <path d="M374.241152,609.125 C533.023017,609.125 661.741152,480.406866 661.741152,321.625 C661.741152,162.843134 533.023017,34.125 374.241152,34.125 L374.241152,609.125 Z" id="Q-fillHalf" fill="#1377B0" transform="translate(517.991152, 321.625000) rotate(-30.000000) translate(-517.991152, -321.625000) "></path>
+                        <path d="M265.5,171.797497 L281.25,199.077297 C388.626694,137.083334 525.92874,173.873306 587.922703,281.25 C649.916666,388.626694 613.126694,525.92874 505.75,587.922703 L521.5,615.202503 L537.25,642.482304 C674.759129,563.091371 721.873236,387.259129 642.482304,249.75 C563.091371,112.240871 387.259129,65.1267636 249.75,144.517696 L265.5,171.797497 L265.5,171.797497 Z" id="Q-outlineHalf" fill="#21A1E3"></path>
+                        <path d="M506.495358,706.826015 L529.667772,744.677645 L552.840186,706.826015 L552.840186,513.200372 L506.495358,513.200372 L506.495358,706.826015 L506.495358,706.826015 Z" id="pencil" fill="#23AEF6" transform="translate(529.667772, 628.939008) rotate(-30.000000) translate(-529.667772, -628.939008) "></path>
+                        <path d="M476.370015,517.156402 L430.025188,517.156402 L430.025188,498.871945 L430.025188,483.773393 C430.025188,479.376497 433.734744,475.821174 438.310714,475.821174 L468.084489,475.821174 C472.655765,475.821174 476.370015,479.381504 476.370015,483.773393 L476.370015,498.871945 L476.370015,517.156402 Z" id="eraser" fill="#23AEF6" transform="translate(453.197601, 496.488788) rotate(-30.000000) translate(-453.197601, -496.488788) "></path>
+                        <path d="M527.993301,738.703322 L528.124289,738.917289 L551.296703,701.065659 L551.296703,507.440016 L528.152488,507.440016 L528.152488,738.703322 L527.993301,738.703322 L527.993301,738.703322 Z" id="pencilHalf" fill="#21A1E3" transform="translate(539.645002, 623.178652) rotate(-30.000000) translate(-539.645002, -623.178652) "></path>
+                        <path d="M451.645344,511.363298 L474.817758,511.363298 L474.817758,493.078841 L474.817758,477.980289 C474.817758,473.5884 471.103508,470.028071 466.532231,470.028071 L451.645344,470.028071 L451.645344,511.363298 L451.645344,511.363298 Z" id="eraserHalf" fill="#21A1E3" transform="translate(463.231551, 490.695685) rotate(-30.000000) translate(-463.231551, -490.695685) "></path>
+                    </g>
+                </svg>
+            </div>
+            <br id="spacer">
+            <div id="load-bar">
+
+            </div>
+        </div>
         <a name="top"/>
         <div class="nav" id="nav">
-            <div onclick="mobileNavClose()" class="navMiddle">
+            <div class="navMiddle">
                 <ul id="navLogo">
                     <a href="#top"><h1>Quintessence</h1></a>
                 </ul>
@@ -22,7 +43,6 @@
                     <li><a href="#submit">Submit</a></li>
                 </ul>
             </div>
-
             <div class="navSide" id="navSide">
                 <ul>
                     <li><a href="#about" onclick="mobileNavClose()">ABOUT</a></li>
@@ -36,8 +56,11 @@
                     <path d="M656,985 L663.896118,985 L671,985 L671,983 L656,983 L656,985 L656,985 Z M656,990 L663.896118,990 L671,990 L671,988 L656,988 L656,990 L656,990 Z M656,995 L663.896118,995 L671,995 L671,993 L656,993 L656,995 L656,995 Z" id="burgerMenu"></path>
                 </g>
             </svg>
+            <div class="cover" id="cover" onclick="mobileNavClose()">
+                <br>
+            </div>
         </div>
-        <div class="container" id="container" onclick="mobileNavClose()">
+        <div class="container" id="container">
             <div class="middle">
                 <svg id="svg" viewBox="0 0 717 283" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <g id="pencil" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(236.000000, -3.000000)">
@@ -59,16 +82,16 @@
                 </div>
             </div>
         </div>
-        <div name="about" class="about" onclick="mobileNavClose()">
+        <div name="about" class="about">
             <br>
         </div>
-        <div name="events" class="events" onclick="mobileNavClose()">
+        <div name="events" class="events">
             <br>
         </div>
-        <div name="join" class="join" onclick="mobileNavClose()">
+        <div name="join" class="join">
             <br>
         </div>
-        <div name="submit" class="submit" onclick="mobileNavClose()">
+        <div name="submit" class="submit">
             <br>
         </div>
     </body>
