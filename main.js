@@ -59,6 +59,6 @@ function mobileNavClose() {
 
 var screenWidth = screen.width;
 
-if (screenWidth < 500) {
-    alert('issues on mobile browsing')
+while (screenWidth < 500) {
+    alert('issues on mobile browsing');
 }
