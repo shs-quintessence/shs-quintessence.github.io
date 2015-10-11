@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic,500italic,700italic,900italic,900&subset=latin,latin-ext);
-
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0 0;
@@ -27,14 +26,14 @@ body {
     width: 0;
 }
 
-#k {
+#navLogo {
     cursor: pointer;
     float: left;
     display: inline;
     margin: 0 10px;
 }
 
-#k h1 {
+#navLogo h1 {
     color: #fff;
     font-weight: 400;
     -webkit-touch-callout: none;
@@ -45,29 +44,28 @@ body {
     user-select: none;
 }
 
-#k a {
+#navLogo a {
     text-decoration: none;
 }
 
-#j {
+#navLinks {
     cursor: pointer;
     display: inline;
     float: right;
     margin: 25px 88px;
 }
 
-#j li {
+#navLinks li {
     display: inline;
     margin: 0 20px;
     transition: border 0.5 ease-in;
 }
 
-#j li:hover {
+#navLinks li:hover {
     border-bottom: 2px solid #fff;
 }
 
-#j a {
-    display: inline;
+#navLinks a {
     text-decoration: none;
     color: #fff;
     font-size: 25px;
@@ -80,6 +78,11 @@ body {
     user-select: none;
 }
 
+.navSide {
+    width: 0;
+    opacity: 0;
+}
+
 .container {
     display: table;
     height: 100vh;
@@ -88,6 +91,7 @@ body {
     color: #f1f1f1;
     text-align: center;
     margin: 0 0;
+    z-index: 50;
 }
 
 .middle {
@@ -97,11 +101,28 @@ body {
     padding: 20vh 0 0;
 }
 
-.middle svg {
+.middle #svg {
     width: 717px;
     height: 283px;
     margin: 0 0;
     z-index: 1;
+}
+
+#svg2 {
+    width: 50px;
+    animation: move 2s ease-out infinite;
+}
+
+@keyframes move{
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .middle h1 {
@@ -119,36 +140,85 @@ body {
     transform: translateY(-180%);
 }
 
-.subhead {
+.about {
     background: #f1f1f1;
-    height: 100vh;
+    height: 50vh;
     width: 100%;
 }
 
-.other {
-    background: rgba(241, 241, 241, 0.72);
-    height: 80vh;
+.events {
+    background: #56a5d1;
+    height: 50vh;
     width: 100%;
 }
 
-@media screen and (max-width: 900px) {
+.join {
+    background: #56d1b0;
+    height: 50vh;
+    width: 100%;
+}
+
+.submit {
+    background: #f1f1f1;
+    height: 50vh;
+    width: 100%;
+}
+
+@media screen and (max-width: 930px) {
     .nav {
         background: #000!important;
     }
 
     .nav svg {
         width: 30px;
-        margin: 25px 1vw;
+        margin: 25px 10px;
     }
 
-    #j {
+    #Menu {
+        fill:#fff;
+        transition: fill 0.5s ease;
+    }
+
+    #Menu:hover, #Menu:active, .navSide:hover + #Menu {
+        fill: #168cc9;
+    }
+
+    #navLinks {
         display: none;
     }
+
+    .navSide {
+        position: fixed;
+        top: 81px;
+        right: -30vw;
+        height: 100vh;
+        width: 30vw;
+        background: #e4e4e4;
+        opacity: 0;
+        z-index: 10;
+        transition: right 0.3s ease-out, opacity 0.3s ease-out;
+    }
+
+    .navSide li {
+        margin: 20px 0;
+        list-style-type: none;
+    }
+
+    .navSide a {
+        font-size: 25px;
+        color: #222;
+        text-decoration: none;
+    }
+
+    .navSide a:hover, .navSide a:active {
+        text-shadow: 3px 3px #aaa;
+    }
+
 
 }
 
 @media screen and (max-width: 750px) {
-    .middle svg {
+    .middle #svg {
         width: 500px;
     }
     .middle h1 {
@@ -157,17 +227,14 @@ body {
     }
 }
 
-@media screen and (max-width: 500px) {
-    .nav svg {
-        margin: 25px 0;
-    }
-
-    #k {
+@media screen and (max-width: 600px) {
+    #navLogo {
         display: none;
     }
 
-    .middle svg {
-        width: 300px;
+    .middle #svg {
+        width: 400px;
+        margin-bottom: 10px;
     }
 
     .middle h1 {
@@ -175,7 +242,4 @@ body {
         transform: translateY(-200%);
     }
 
-    .container {
-        height: 50vh;
-    }
 }

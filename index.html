@@ -5,32 +5,41 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;"/>
         <link rel="stylesheet" href="main.css">
+        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
         <script src="main.js"></script>
     </head>
     <body>
+        <a name="top"/>
         <div class="nav" id="nav">
-            <div class="navMiddle">
-                <ul id="k">
-                    <a href="#"><h1>Quintessence</h1></a>
+            <div onclick="mobileNavClose()" class="navMiddle">
+                <ul id="navLogo">
+                    <a href="#top"><h1>Quintessence</h1></a>
                 </ul>
-                <ul id="j">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Join</a></li>
-                    <li><a href="#">Submit</a></li>
+                <ul id="navLinks">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#join">Join</a></li>
+                    <li><a href="#submit">Submit</a></li>
                 </ul>
-
             </div>
-            <svg viewBox="0 0 15 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <g id="Menu" transform="translate(-656.000000, -983.000000)" fill="#fff" fill-rule="evenodd" stroke="none">
-                        <path d="M656,985 L663.896118,985 L671,985 L671,983 L656,983 L656,985 L656,985 Z M656,990 L663.896118,990 L671,990 L671,988 L656,988 L656,990 L656,990 Z M656,995 L663.896118,995 L671,995 L671,993 L656,993 L656,995 L656,995 Z" id="burgerMenu"></path>
-                    </g>
+
+            <div class="navSide" id="navSide">
+                <ul>
+                    <li><a href="#about" onclick="mobileNavClose()">ABOUT</a></li>
+                    <li><a href="#events" onclick="mobileNavClose()">EVENTS</a></li>
+                    <li><a href="#join" onclick="mobileNavClose()">JOIN</a></li>
+                    <li><a href="#submit" onclick="mobileNavClose()">SUBMIT</a></li>
+                </ul>
+            </div>
+            <svg id="Menu" fill="#fff" viewBox="0 0 15 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onclick="mobileNavOpen()">
+                <g transform="translate(-656.000000, -983.000000)"  fill-rule="evenodd" stroke="none">
+                    <path d="M656,985 L663.896118,985 L671,985 L671,983 L656,983 L656,985 L656,985 Z M656,990 L663.896118,990 L671,990 L671,988 L656,988 L656,990 L656,990 Z M656,995 L663.896118,995 L671,995 L671,993 L656,993 L656,995 L656,995 Z" id="burgerMenu"></path>
+                </g>
             </svg>
         </div>
-        <div class="container" id="container">
+        <div class="container" id="container" onclick="mobileNavClose()">
             <div class="middle">
-
-                <svg viewBox="0 0 717 283" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <svg id="svg" viewBox="0 0 717 283" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <g id="pencil" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(236.000000, -3.000000)">
                         <path d="M78.2639217,278.350059 L101.436336,240.498429 L101.436336,46.8727859 L55.0915079,46.8727859 L55.0915079,240.498429 L78.2639217,278.350059 Z" id="Triangle-1" fill="#23AEF6" transform="translate(78.263922, 162.611422) rotate(-330.000000) translate(-78.263922, -162.611422) "></path>
                         <path d="M76.5894504,283.896448 L76.7204389,284.110415 L99.8928527,246.258785 L99.8928527,52.6331422 L76.7486382,52.6331422 L76.7486382,283.896448 L76.5894504,283.896448 L76.5894504,283.896448 Z" id="Triangle-1-Copy-2" fill="#21A1E3" transform="translate(88.241152, 168.371779) rotate(-330.000000) translate(-88.241152, -168.371779) "></path>
@@ -39,12 +48,25 @@
                     </g>
                 </svg>
                 <h1>QUINTESSENCE</h1>
+                <a href="#about">
+                    <svg id="svg2" viewBox="0 0 27 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="rules" transform="translate(-717.000000, -991.000000)" stroke="none" fill-rule="evenodd" fill="#fff">
+                            <path d="M730.5,1000.6077 L730.495191,1000.61603 L724.343048,997.064084 L717.504809,993.116025 L718.504809,991.383975 L730.5,998.309401 L742.495191,991.383975 L743.495191,993.116025 L737.343048,996.667966 L730.504809,1000.61603 L730.5,1000.6077 L730.5,1000.6077 Z" id="downArrow"></path>
+                        </g>
+                    </svg>
+                </a>
             </div>
         </div>
-        <div class="subhead">
+        <div name="about" class="about">
             <br>
         </div>
-        <div class="other">
+        <div name="events" class="events">
+            <br>
+        </div>
+        <div name="join" class="join">
+            <br>
+        </div>
+        <div name="submit" class="submit">
             <br>
         </div>
     </body>
