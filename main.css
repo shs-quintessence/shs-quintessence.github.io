@@ -91,7 +91,6 @@ body {
     color: #f1f1f1;
     text-align: center;
     margin: 0 0;
-    z-index: 50;
 }
 
 .middle {
@@ -114,6 +113,18 @@ body {
 }
 
 @keyframes move{
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes move{
     0% {
         transform: translateY(0);
     }
@@ -241,6 +252,12 @@ body {
         font-size: 30px;
         transform: translateY(-200%);
     }
+    .navSide {
+        top: 78px;
+        height: 100vh;
+        width: 100vw;
+        opacity: 0;
+    }
 
 }
 
@@ -248,4 +265,5 @@ body {
     body {
         display: none;
     }
+
 }

@@ -4,6 +4,7 @@ function navScroll() {
     var offsetHeight = document.getElementById('container').offsetHeight;
     var navFadeHeight = offsetHeight / 4;
     var nav = document.getElementById('nav');
+    var title = document.getElementById('headerTitle');
 
     if (document.body.scrollTop || document.documentElement.scrollTop > navFadeHeight) {
         nav.style.background = 'rgba(0, 0, 0, 1)';
@@ -38,4 +39,10 @@ function mobileNavOpen() {
 function mobileNavClose() {
     mobileNav.style.right = "-30vw";
     mobileNav.style.opacity = "0";
+}
+
+var screenWidth = screen.width;
+
+if (screenWidth < 500) {
+    alert('issues on mobile browsing')
 }
