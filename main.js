@@ -18,7 +18,6 @@ function navScroll() {
         nav.style.background = 'rgba(0, 0, 0, 1)';
     } else {
         nav.style.background = 'rgba(0, 0, 0, 0)';
-
     }
 }
 
