@@ -1,0 +1,125 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic,500italic,700italic,900italic,900&subset=latin,latin-ext);
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.content {
+    height: 100vh;
+    width: 100%;
+    background: #2d2d2d;
+    z-index: -1;
+}
+
+.nav {
+    position: fixed;
+    height: 100%;
+    width: 106px;
+    z-index: 50;
+}
+
+#navbar-about, #navbar-events, #navbar-people, #navbar-submit {
+    postion: fixed;
+    height: 100px;
+    width: 100px;
+    background: #fff;
+    z-index: 50;
+}
+
+.aboutCover, .eventsCover, .peopleCover, .submitCover {
+    position: fixed;
+    height: 100px;
+    width: 100px;
+    z-index: 80;
+    left: 0;
+    cursor: pointer;
+}
+
+.aboutCover {
+    top: 0;
+}
+
+.eventsCover {
+    top: 100px;
+}
+
+.peopleCover {
+    top: 200px;
+}
+
+.submitCover {
+    top: 300px;
+}
+
+#navbar-innerFull {
+    position: fixed;
+    width: 100px;
+    height: calc(100% - 400px);
+    top: 400px;
+    left: 0;
+    background: #fff;
+    z-index: 50;
+}
+
+.aboutSide, .eventSide, .peopleSide, .submitSide {
+    position: absolute;
+    height: 100px;
+    width: 6px;
+    left: 100px;
+    z-index: 50;
+}
+
+#about, #people, #events, #submit {
+    height: 0px;
+    transition: height 500ms 1000ms ease;
+    margin: 24px 25px;
+}
+
+.aboutCover:hover + #navbar-about .aboutSide {
+    background: #cf3b3b;
+    transition: background 500ms ease;
+}
+
+.eventsCover:hover + #navbar-events .eventSide {
+    background: #ffcb53;
+    transition: background 500ms ease;
+}
+
+.peopleCover:hover + #navbar-people .peopleSide {
+    background: #177bf3;
+    transition: background 500ms ease;
+}
+
+.submitCover:hover + #navbar-submit .submitSide {
+    background: #2fd271;
+    transition: background 500ms ease;
+}
+
+#aboutPage, #eventsPage, #peoplePage, #submitPage {
+    position: absolute;
+    height: 200%;
+    width: 0;
+    left: 100px;
+    top: 0;
+    transition: width 500ms ease, color 1000ms ease;
+    z-index: 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#aboutPage {
+    background: #cf3b3b;
+}
+
+#eventsPage {
+    background: #ffcb53;
+}
+
+#peoplePage {
+    background: #177bf3;
+}
+
+#submitPage {
+    background: #2fd271;
+}

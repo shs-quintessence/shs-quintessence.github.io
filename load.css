@@ -1,14 +1,16 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic,500italic,700italic,900italic,900&subset=latin,latin-ext);
 body {
-    font-family: 'Roboto', sans-serif;
     margin: 0 0;
     padding: 0 0;
 }
 
 .load {
+    position: absolute;
+    top: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: #eee;
+    transition: top 500ms ease-out;
+    z-index: 100000;
 }
 
 .load-bar {
@@ -19,41 +21,101 @@ body {
     width: 250px;
     overflow: hidden;
     background: #dadada;
-    animation: enlarge 1s 7s ease-out forwards;
-    -webkit-animation: enlarge 1s 7s ease-out forwards;
+    animation: shrink 500ms 7000ms forwards;
+    -webkit-animation: shrink 500ms 7000ms forwards;
+    z-index: 200;
 }
 
-@keyframes enlarge {
+.under-bar {
+    position: absolute;
+    height: 6px;
+    left: calc(50% - 250px);
+    bottom: calc(50% - 100px);
+    width: 0;
+    background: #dadada;
+    animation: grow 2500ms 7000ms forwards;
+    -webkit-animation: grow 2500ms 7000ms ease forwards;
+}
+
+@keyframes shrink {
     from {
-        height: 6px;
-        width: 250px;
         left: calc(50% - 125px);
         bottom: calc(50% - 3px);
-        background: #dadada;
+        width: 250px;
+    }
+    99% {
+        left: calc(50% - 125px);
+        bottom: calc(50% - 3px);
+        width: 0;
     }
     to {
-        height: 500%;
-        width: 100%;
-        left: 0;
-        bottom: -400%;
-        background: #38bfc3;
+        left: calc(50% - 250px);
+        bottom: calc(50% - 100px);
+        width: 0;
     }
 }
 
-@-webkit-keyframes enlarge {
+@-webkit-keyframes shrink {
     from {
-        height: 6px;
-        width: 250px;
         left: calc(50% - 125px);
         bottom: calc(50% - 3px);
-        background: #dadada;
+        width: 250px;
+    }
+    99% {
+        left: calc(50% - 125px);
+        bottom: calc(50% - 3px);
+        width: 0;
     }
     to {
-        height: 500%;
-        width: 100%;
-        left: 0;
-        bottom: -400%;
-        background: #38bfc3;
+        left: calc(50% - 250px);
+        bottom: calc(50% - 100px);
+        width: 0;
+    }
+}
+
+@keyframes grow {
+    from {
+        left: calc(50% - 250px);
+        bottom: calc(50% - 100px);
+        width: 0;
+    }
+    60% {
+        left: calc(50% - 250px);
+        bottom: calc(50% - 100px);
+        width: 0;
+    }
+    80% {
+        left: calc(50% - 250px);
+        bottom: calc(50% - 100px);
+        width: 500px;
+    }
+    to {
+        left: calc(50% - 250px);
+        bottom: calc(50% - 100px);
+        width: 500px;
+    }
+}
+
+@-webkit-keyframes grow {
+    from {
+        left: calc(50% - 250px);
+        bottom: calc(50% - 100px);
+        width: 0;
+    }
+    60% {
+        left: calc(50% - 250px);
+        bottom: calc(50% - 100px);
+        width: 0;
+    }
+    80% {
+        left: calc(50% - 250px);
+        bottom: calc(50% - 100px);
+        width: 500px;
+    }
+    to {
+        left: calc(50% - 250px);
+        bottom: calc(50% - 100px);
+        width: 500px;
     }
 }
 
@@ -64,8 +126,8 @@ body {
     width: 0;
     height: 6px;
     background-color: #aaa;
-    -webkit-animation:  loadFast 5s forwards;
-    animation: loadFast 5s forwards;
+    -webkit-animation:  loadFast 5000ms forwards;
+    animation: loadFast 5000ms forwards;
 }
 
 .load-bar::after{
@@ -75,13 +137,12 @@ body {
     width: 0;
     height: 6px;
     background-color: #000;
-    -webkit-animation:  loading 5s forwards;
-    animation: loading 5s forwards;
+    -webkit-animation:  loading 5000ms forwards;
+    animation: loading 5000ms forwards;
 }
 
 @keyframes loading {
     from {
-
         width: 50%;
     }
     50% {
@@ -148,20 +209,50 @@ body {
     }
 }
 
-.load svg {
-    margin-top: 10px;
+.hideBox {
     position: fixed;
+    width: 500px;
+    height: 500px;
+    left: calc(50% - 250px);
+    top: calc(50% + 1.5px);
+    background: #eee;
+    z-index: 100;
+    animation: unHide 0ms 6000ms forwards;
+    -webkit-animation: unHide 0ms 6000ms forwards;
+}
+
+@keyframes unHide {
+    from {
+        height: 500px;
+    }
+    to {
+        height: 0;
+    }
+}
+
+@-webkit-keyframes unHide {
+    from {
+        height: 500px;
+    }
+    to {
+        height: 0;
+    }
+}
+
+.logoAboveTitle svg {
+    margin-top: 10px;
+    position: absolute;
     width: 225px;
     left: calc(50% - 112.5px);
     bottom: calc(50% - 3px);
-    z-index: 100;
+    overflow: visible;
 }
 
 #Logo {
     transform: translateY(1000px);
-    animation: popUp 1s 5s forwards;
-    -webkite-transform: translateY(1000px);
-    -webkit-animation: popUp 1s 5s forwards;
+    animation: popUp 1000ms 5000ms forwards;
+    -webkit-transform: translateY(1000px);
+    -webkit-animation: popUp 1000ms 5000ms forwards;
 
 }
 
@@ -174,11 +265,120 @@ body {
     }
 }
 
-@-webkit-keyframes move {
+@-webkit-keyframes popUp {
     from {
         -webkit-transform: translateY(1000px);
     }
     to {
         -webkit-transform: translateY(0);
     }
+}
+
+.titleContainer svg {
+    margin-top: 15px;
+    position: absolute;
+    width: 500px;
+    left: calc(50% - 250px);
+    top: calc(50% - 3px);
+}
+
+#Title {
+    opacity: 0;
+    animation: show 500ms 8000ms forwards;
+    -webkit-animation: show 500ms 8000ms forwards;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*#totalPencil {
+    transform-origin: 50% 50%;
+    animation: drawUnderlineRotate 5000ms 7000ms forwards;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-animation: drawUnderlineRotate 5000ms 7000ms forwards;
+}
+
+@keyframes drawUnderlineRotate {
+    from {
+        transform: rotate(0) translate(0, 0);
+    }
+    20% {
+        transform: rotate(90deg) translate(0, 0);
+    }
+    60% {
+        transform: rotate(90deg) translate(400px, 380px);
+    }
+    80% {
+        transform: rotate(90deg) translate(400px, -908px);
+    }
+    to{
+        transform: rotate(0) translate(0, 0);
+    }
+}
+
+@-webkit-keyframes drawUnderlineRotate {
+    from {
+        -webkit-transform: rotate(0) translate(0, 0);
+    }
+    20% {
+        -webkit-transform: rotate(90deg) translate(0, 0);
+    }
+    60% {
+        -webkit-transform: rotate(90deg) translate(400px, 380px);
+    }
+    80% {
+        -webkit-transform: rotate(90deg) translate(400px, -908px);
+    }
+    to{
+        -webkit-transform: rotate(0) translate(0, 0);
+    }
+}*/
+
+.enterSite svg{
+    cursor: pointer;
+    position: absolute;
+    width: 100px;
+    left: calc(50% - 50px);
+    bottom: 50px;
+    animation: pullUp 500ms 8500ms forwards;
+    -webkit-animation: pullUp 500ms 8500ms forwards;
+
+}
+
+@keyframes pullUp {
+    from {
+        bottom: 50px;
+    }
+    to {
+        bottom: calc(50% - 180px);
+    }
+}
+
+@-webkit-keyframes pullUp {
+    from {
+        bottom: 50px;
+    }
+    to {
+        bottom: calc(50% - 180px);
+    }
+}
+
+.enterSite svg path:hover {
+    transition: fill 2000ms ease;
+    fill: #1b80b4;
 }
