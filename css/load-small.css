@@ -1,0 +1,120 @@
+body {
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.load {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    transition: top 1000ms ease-out;
+    z-index: 100000;
+    overflow: hidden;
+}
+
+.load-bar {
+    position: absolute;
+    height: 6px;
+    left: calc(50% - 125px);
+    bottom: calc(50% - 3px);
+    width: 250px;
+    overflow: hidden;
+    background: #dadada;
+    z-index: 200;
+}
+
+.under-bar {
+    display: none;
+}
+
+.load-bar::before{
+    position: absolute;
+    content: "";
+    left: -20%;
+    width: 0;
+    height: 6px;
+    background-color: #aaa;
+    -webkit-animation:  loadFast 3000ms forwards;
+    animation: loadFast 3000ms forwards;
+}
+
+.load-bar::after{
+    position: absolute;
+    content: "";
+    left: -50%;
+    width: 0;
+    height: 6px;
+    background-color: #000;
+    -webkit-animation:  loading 3000ms forwards;
+    animation: loading 3000ms forwards;
+}
+
+@keyframes loading {
+    from {
+        width: 50%;
+    }
+    50% {
+        width: 100%;
+    }
+    80% {
+        width: 170%;
+    }
+    to {
+        width: 200%;
+    }
+}
+
+@-webkit-keyframes loading {
+    from {
+        width: 50%;
+    }
+    50% {
+        width: 100%;
+    }
+    80% {
+        width: 170%;
+    }
+    to {
+        width: 200%;
+    }
+}
+
+@keyframes loadFast {
+    from {
+        width: 50%;
+    }
+    50% {
+        width: 120%;
+    }
+    80% {
+        width: 170%;
+        opacity: 1;
+    }
+    to {
+        width: 220%;
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes loadFast {
+    from {
+        width: 80%;
+    }
+    50% {
+        width: 120%;
+    }
+    80% {
+        width: 190%;
+        opacity: 1;
+    }
+    to {
+        width: 220%;
+        opacity: 0;
+    }
+}
+
+svg {
+    display: none;
+}

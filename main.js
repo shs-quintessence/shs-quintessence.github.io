@@ -26,6 +26,10 @@ function define() {
     eventsBack = document.getElementById('navbar-events');
     peopleBack = document.getElementById('navbar-people');
     submitBack = document.getElementById('navbar-submit');
+
+    if (screen.width < 800 || screen.height < 700) {
+        setTimeout(revealSite, 3000);
+    }
 }
 
 onload = define;
