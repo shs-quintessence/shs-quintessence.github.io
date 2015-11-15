@@ -19,7 +19,7 @@ function define() {
     peopleBack = document.getElementById('navbar-people');
     submitBack = document.getElementById('navbar-submit');
 
-    if (screen.width < 800 || screen.height < 700) {
+    if (window.innerWidth < 800 || window.innerHeight < 700) {
         setTimeout(revealSite, 3000);
     }
 }

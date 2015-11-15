@@ -35,22 +35,6 @@ body {
     cursor: pointer;
 }
 
-.aboutCover {
-    top: 0;
-}
-
-.eventsCover {
-    top: 100px;
-}
-
-.peopleCover {
-    top: 200px;
-}
-
-.submitCover {
-    top: 300px;
-}
-
 #navbar-innerFull {
     position: fixed;
     width: 100px;
