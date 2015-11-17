@@ -89,7 +89,7 @@ body {
 /*-----------------Title Page-----------------*/
 
 #titlePage {
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: calc(100% - 100px);
     left: 100px;

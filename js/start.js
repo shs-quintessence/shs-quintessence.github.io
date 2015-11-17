@@ -10,6 +10,11 @@ var submitBack;
 
 var random;
 
+var aboutSelected;
+var eventsSelected;
+var peopleSelected;
+var submitSelected;
+
 function define() {
     about = document.getElementById('aboutPage');
     events = document.getElementById('eventsPage');
@@ -40,6 +45,11 @@ function define() {
     random = Math.floor(Math.random()*16777215).toString(16);
     randomColor = "#" + random;
     document.getElementById('titlePage').style.backgroundColor = randomColor;
+
+    aboutSelected = 0;
+    eventsSelected = 0;
+    peopleSelected = 0;
+    submitSelected = 0;
 
 }
 
