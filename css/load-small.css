@@ -115,6 +115,6 @@ body {
     }
 }
 
-svg {
+.load svg {
     display: none;
 }

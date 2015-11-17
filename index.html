@@ -3,13 +3,13 @@
         <title>quintessence</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;"/>
+        <link rel="stylesheet" href="css/too-small.css" media="(max-height: 200px) and (max-width: 200px), (max-height: 200px), (max-width: 350px)">
         <link rel="stylesheet" href="css/load.css" media="(min-width: 800px) and (min-height: 700px)">
-        <link rel="stylesheet" href="css/load-small.css" media="(max-width: 800px), (max-height: 700px)">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/start.js"></script>
-        <script src="js/main.js"></script>
+        <link rel="stylesheet" href="css/load-small.css" media="(max-width: 800px) and (min-width: 200px), (max-height: 700px) and (min-height: 200px)">
+        <link rel="stylesheet" href="css/main.css" media="(min-height: 400px)">
+        <link rel="stylesheet" href="css/main-small.css" media="(max-height: 400px) and (min-height: 200px)">
     </head>
-    <body>
+    <body id="body">
         <div class="load" id="siteReveal">
             <div class="load-bar">
             </div>
@@ -50,7 +50,18 @@
             </div>
         </div>
         <div class="content">
+            <div class="titlePage">
+                <h1>QUINTESSENCE</h1>
+            </div>
             <nav class="nav">
+                <div class="aboutCover-small" onclick="openAbout()">
+                </div>
+                <div class="eventsCover-small" onclick="openEvents()">
+                </div>
+                <div class="peopleCover-small" onclick="openPeople()">
+                </div>
+                <div class="submitCover-small" onclick="openSubmit()">
+                </div>
                 <div class="aboutCover" onclick="openAbout()">
                 </div>
                 <div id="navbar-about">
@@ -95,5 +106,7 @@
                 <h1>Submit</h1>
             </div>
         </div>
+        <script src="js/start.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>

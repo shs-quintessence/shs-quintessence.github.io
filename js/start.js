@@ -19,8 +19,20 @@ function define() {
     peopleBack = document.getElementById('navbar-people');
     submitBack = document.getElementById('navbar-submit');
 
-    if (window.innerWidth < 800 || window.innerHeight < 700) {
+    if (window.innerHeight < 200 || window.innerWidth < 360) {
+
+        document.getElementById('body').style.display = "none";
+        alert("please try using a larger screen")
+
+    }else if (window.innerHeight < 400 && window.innerWidth < 400) {
+
+        document.getElementById('body').style.display = "none";
+        alert("please try using a larger screen")
+
+    }else if (window.innerWidth < 800 || window.innerHeight < 700) {
+
         setTimeout(revealSite, 3000);
+
     }
 }
 
