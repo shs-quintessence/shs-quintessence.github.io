@@ -10,18 +10,6 @@ body {
     z-index: -1;
 }
 
-.titlePage {
-    position: absolute;
-    height: 100%;
-    width: calc(100% - 100px);
-    left: 100px;
-    top: 0;
-    z-index: 0;
-    text-align: center;
-    color: rgba(255, 255, 255, 1);
-    overflow: hidden;
-}
-
 .nav {
     position: fixed;
     height: 100%;
@@ -94,6 +82,40 @@ body {
     transition: background 500ms ease;
 }
 
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- Page specifics
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+/*-----------------Title Page-----------------*/
+
+#titlePage {
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 100px);
+    left: 100px;
+    top: 0;
+    background-color: #2d2d2d;
+    z-index: 0;
+    overflow: hidden;
+    transition: background-color 4000ms ease;
+}
+
+#titlePage h1 {
+    position: absolute;
+    top: 40%;
+    left: calc(50% - 5ch);
+    color: #fff;
+    font-size: 10ch;
+    padding-bottom: 10px;
+    border-bottom: 12px solid #222;
+}
+
+/*.load {
+    display: none;
+}*/
+
+/*--------------------------------------------*/
+
 #aboutPage, #eventsPage, #peoplePage, #submitPage {
     position: absolute;
     height: 200%;
@@ -108,18 +130,34 @@ body {
     overflow-y: scroll;
 }
 
+/*-----------------About Page-----------------*/
+
 #aboutPage {
     background: #cf3b3b;
 }
+
+/*--------------------------------------------*/
+
+/*-----------------Events Page-----------------*/
 
 #eventsPage {
     background: #ffcb53;
 }
 
+/*---------------------------------------------*/
+
+/*-----------------People Page-----------------*/
+
 #peoplePage {
     background: #177bf3;
 }
 
+/*---------------------------------------------*/
+
+/*-----------------Submit Page-----------------*/
+
 #submitPage {
     background: #2fd271;
 }
+
+/*---------------------------------------------*/

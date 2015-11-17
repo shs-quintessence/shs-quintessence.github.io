@@ -8,6 +8,8 @@ var eventsBack;
 var peopleBack;
 var submitBack;
 
+var random;
+
 function define() {
     about = document.getElementById('aboutPage');
     events = document.getElementById('eventsPage');
@@ -34,6 +36,11 @@ function define() {
         setTimeout(revealSite, 3000);
 
     }
+
+    random = Math.floor(Math.random()*16777215).toString(16);
+    randomColor = "#" + random;
+    document.getElementById('titlePage').style.backgroundColor = randomColor;
+
 }
 
 onload = define;

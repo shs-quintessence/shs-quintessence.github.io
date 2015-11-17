@@ -6,8 +6,6 @@ function revealSite() {
     document.getElementById('submit').style.height = "50px";
 }
 
-
-
 if (window.innerHeight < 400) {
     function openAbout() {
         about.style.height = "100%";
@@ -93,6 +91,10 @@ if (window.innerHeight < 400) {
         eventsBack.style.background = "#fff";
         peopleBack.style.background = "#fff";
         submitBack.style.background = "#fff";
+
+        random = Math.floor(Math.random()*16777215).toString(16);
+        randomColor = "#" + random;
+        document.getElementById('titlePage').style.backgroundColor = randomColor;
     }
 
     function openEvents() {
@@ -110,6 +112,11 @@ if (window.innerHeight < 400) {
         eventsBack.style.background = "#000";
         peopleBack.style.background = "#fff";
         submitBack.style.background = "#fff";
+
+        random = Math.floor(Math.random()*16777215).toString(16);
+        randomColor = "#" + random;
+        document.getElementById('titlePage').style.backgroundColor = randomColor;
+
     }
 
     function openPeople() {
@@ -127,6 +134,11 @@ if (window.innerHeight < 400) {
         eventsBack.style.background = "#fff";
         peopleBack.style.background = "#000";
         submitBack.style.background = "#fff";
+
+        random = Math.floor(Math.random()*16777215).toString(16);
+        randomColor = "#" + random;
+        document.getElementById('titlePage').style.backgroundColor = randomColor;
+
     }
 
     function openSubmit() {
@@ -144,6 +156,11 @@ if (window.innerHeight < 400) {
         eventsBack.style.background = "#fff";
         peopleBack.style.background = "#fff";
         submitBack.style.background = "#000";
+
+        random = Math.floor(Math.random()*16777215).toString(16);
+        randomColor = "#" + random;
+        document.getElementById('titlePage').style.backgroundColor = randomColor;
+
     }
 
 }

@@ -31,7 +31,7 @@ body {
 }
 
 #navbar-about, #navbar-events, #navbar-people, #navbar-submit {
-    postion: absolute;
+    position: absolute;
     display: table-cell;
     margin: 0 0;
     height: 100px;
@@ -91,7 +91,7 @@ body {
 #about, #people, #events, #submit {
     position: absolute;
     top: 0;
-    wisth: 0px;
+    height: 0px;
     transition: height 500ms 1000ms ease;
     margin: 25px 25px;
 }
