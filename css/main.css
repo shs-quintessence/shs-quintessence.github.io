@@ -107,7 +107,71 @@ body {
     color: #fff;
     font-size: 10ch;
     padding-bottom: 10px;
-    border-bottom: 12px solid #222;
+}
+
+#titlePage h1::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 1.2ch;
+    bottom: 0;
+    height: 6px;
+    width: 0;
+    background: #222;
+    transition: width 250ms ease-in-out, left 250ms ease-in-out;
+}
+
+#titlePage h1:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+#titlePage .notice {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background: #ff5544;
+}
+
+#titlePage h3 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 2ch;
+    text-align: center;
+}
+
+#titlePage span {
+    cursor: pointer;
+    color: #ffcb53;
+}
+
+#titlePage span:hover {
+    color: #3c372b;
+}
+
+#titlePage svg {
+    width: 300px;
+    position: absolute;
+    top: 10%;
+    left: calc(50% - 150px);
+    overflow: visible;
+    opacity: 0.5;
+}
+
+#titlePage svg #totalPencilTitle {
+    transform-origin: 50% 50%;
+    animation: moveAcross 1000ms alternate-reverse infinite;
+}
+
+@keyframes moveAcross {
+    from {
+        transform: rotate(0);
+    }
+    10% {
+        transform: rotate(-9deg);
+    }
+    to {
+        transform: rotate(0);
+    }
 }
 
 /*.load {
@@ -118,17 +182,23 @@ body {
 
 #aboutPage, #eventsPage, #peoplePage, #submitPage {
     position: absolute;
-    height: 200%;
+    height: 100%;
     width: 0;
     left: 100px;
     top: 0;
     transition: width 500ms ease, color 1000ms ease;
-    z-index: 0;
-    text-align: center;
     color: rgba(255, 255, 255, 0);
+    text-align: center;
+    z-index: 0;
     overflow-x: hidden;
     overflow-y: scroll;
 }
+
+#aboutPage h2, #eventsPage h2, #peoplePage h2, #submitPage h2 {
+    font-weight: 300;
+    text-transform: lowercase;
+}
+
 
 /*-----------------About Page-----------------*/
 
@@ -143,6 +213,47 @@ body {
 #eventsPage {
     background: #ffcb53;
 }
+
+#eventsPage .eventsPageContent {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: calc(50% - 150px);
+    left: calc(50% - 200px);
+}
+
+#eventsPage .eventsPageContent h1 {
+    padding: 6px 0;
+    border-bottom: 3px solid #fff;
+}
+
+#eventsPage .eventsPageContent #date {
+    margin: 10px 0;
+    padding: 15px 0;
+    background: #1d1d1d;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#eventsPage .eventsPageContent #new {
+    margin: 10px 0;
+    padding: 15px 0;
+    background: #1d1d1d;
+    color: rgba(255, 255, 255, 0.8);
+    border: 5px solid #c84d41;
+}
+
+#eventsPage .eventsPageContent #new:hover::after {
+    content:"new";
+    color: #d14343;
+    border: 2px dashed #c84d41;
+    margin: 0 5px;
+    padding: 0 5px;
+}
+
+#eventsPage .eventsPageContent strong{
+    color: #fff;
+}
+
 
 /*---------------------------------------------*/
 

@@ -22,6 +22,8 @@ if (window.innerHeight < 400) {
         eventsBack.style.background = "#fff";
         peopleBack.style.background = "#fff";
         submitBack.style.background = "#fff";
+
+        window.scrollTo(0, 0);
     }
 
     function openEvents() {
@@ -39,6 +41,8 @@ if (window.innerHeight < 400) {
         eventsBack.style.background = "#000";
         peopleBack.style.background = "#fff";
         submitBack.style.background = "#fff";
+
+        window.scrollTo(0, 0);
     }
 
     function openPeople() {
@@ -56,6 +60,8 @@ if (window.innerHeight < 400) {
         eventsBack.style.background = "#fff";
         peopleBack.style.background = "#000";
         submitBack.style.background = "#fff";
+
+        window.scrollTo(0, 0);
     }
 
     function openSubmit() {
@@ -73,6 +79,8 @@ if (window.innerHeight < 400) {
         eventsBack.style.background = "#fff";
         peopleBack.style.background = "#fff";
         submitBack.style.background = "#000";
+
+        window.scrollTo(0, 0);
     }
 
 } else {
@@ -102,6 +110,8 @@ if (window.innerHeight < 400) {
             eventsSelected = 0;
             peopleSelected = 0;
             submitSelected = 0;
+
+            window.scrollTo(0, 0);
 
         } else {
 
@@ -146,6 +156,8 @@ if (window.innerHeight < 400) {
             peopleSelected = 0;
             submitSelected = 0;
 
+            window.scrollTo(0, 0);
+
         } else {
 
             events.style.width = "0";
@@ -189,6 +201,8 @@ if (window.innerHeight < 400) {
             peopleSelected = 1;
             submitSelected = 0;
 
+            window.scrollTo(0, 0);
+
         } else {
 
             people.style.width = "0";
@@ -231,6 +245,8 @@ if (window.innerHeight < 400) {
             eventsSelected = 0;
             peopleSelected = 0;
             submitSelected = 1;
+
+            window.scrollTo(0, 0);
 
         } else {
 
