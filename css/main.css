@@ -18,7 +18,6 @@ body {
 }
 
 #navbar-about, #navbar-events, #navbar-people, #navbar-submit {
-    postion: fixed;
     height: 100px;
     width: 100px;
     background: #fff;
@@ -82,9 +81,134 @@ body {
     transition: background 500ms ease;
 }
 
-/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- Page specifics
+/*
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Page specifics
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 */
+
+#surveyNotice {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    width: 200px;
+    height: 51px;
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 20px;
+    background: #fff;
+    z-index: 500;
+    overflow: hidden;
+}
+
+#surveyNotice p {
+    position: relative;
+    text-align: center;
+    color: #4177b6;
+    z-index: 499;
+}
+
+#surveyNotice::before, #surveyNotice::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: rgba(191, 191, 191, 0.2);
+    transition: width 500ms ease-in, height 500ms ease-in;
+    z-index: 490;
+}
+
+#surveyNotice::before{
+    content: "";
+    top: -99.5px;
+    right: -25px;
+}
+
+#surveyNotice::after{
+    content: "";
+    bottom: -99.5px;
+    left: -25px;
+}
+
+#surveyNotice:hover::before {
+    width: 250px;
+    height: 250px;
+}
+
+#surveyNotice:hover::after {
+    width: 250px;
+    height: 250px;
+}
+
+#survey {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #1d1d1d;
+    width: 100vw;
+    height: 100vh;
+    z-index: 500;
+    overflow: hidden;
+}
+
+#survey input {
+    position: absolute;
+    left: calc(50% - 300px);
+    width: 800px;
+    height: 100px;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: #1e5b8c;
+    border-bottom: 5px solid #181818;
+    padding: 10px 5px;
+    font-size: 4em;
+    transition: border-bottom 500ms ease-out;
+}
+
+#survey li {
+    display: block;
+    position: absolute;
+    left: calc(50% - 400px);
+    list-style-type: none;
+    width: 800px;
+    height: 100px;
+
+}
+
+#survey #name {
+    bottom: calc(50% - 50px);
+    transition: bottom 1000ms ease;
+}
+
+#survey #email, #survey #next, #survey #submit {
+    bottom: -200%;
+    transition: bottom 1000ms ease;
+}
+
+#survey input:focus {
+    border-bottom: 5px solid #000;
+    outline-width: 0;
+}
+
+#survey input::-moz-placeholder {
+    color: #171717;
+}
+
+#survey input::-webkit-input-placeholder {
+    color: #171717;
+}
+
+#survey label {
+    position: absolute;
+    top: calc(50% - 120px);
+    left: calc(50% - 300px);
+    font-weight: 900;
+    color: #fff;
+    font-size: 3em;
+}
 
 /*-----------------Title Page-----------------*/
 
@@ -151,7 +275,7 @@ body {
 #titlePage svg {
     width: 300px;
     position: absolute;
-    top: 10%;
+    bottom: 50%;
     left: calc(50% - 150px);
     overflow: visible;
     opacity: 0.5;
@@ -159,10 +283,10 @@ body {
 
 #titlePage svg #totalPencilTitle {
     transform-origin: 50% 50%;
-    animation: moveAcross 1000ms alternate-reverse infinite;
+    animation: shake 1000ms alternate-reverse infinite;
 }
 
-@keyframes moveAcross {
+@keyframes shake {
     from {
         transform: rotate(0);
     }
@@ -174,15 +298,15 @@ body {
     }
 }
 
-/*.load {
+.load {
     display: none;
-}*/
+}
 
 /*--------------------------------------------*/
 
 #aboutPage, #eventsPage, #peoplePage, #submitPage {
     position: absolute;
-    height: 100%;
+    height: 892px;
     width: 0;
     left: 100px;
     top: 0;
@@ -218,7 +342,7 @@ body {
     position: absolute;
     width: 400px;
     height: 300px;
-    top: calc(50% - 150px);
+    bottom: calc(50% - 150px);
     left: calc(50% - 200px);
 }
 
@@ -245,15 +369,14 @@ body {
 #eventsPage .eventsPageContent #new:hover::after {
     content:"new";
     color: #d14343;
-    border: 2px dashed #c84d41;
-    margin: 0 5px;
+    border: 2px dashed #d14343;
+    margin: 0 10px;
     padding: 0 5px;
 }
 
 #eventsPage .eventsPageContent strong{
     color: #fff;
 }
-
 
 /*---------------------------------------------*/
 
@@ -269,6 +392,15 @@ body {
 
 #submitPage {
     background: #2fd271;
+}
+
+#submitPage h3 {
+    font-weight: 200;
+}
+
+#submitPage a {
+    color: #048704;
+    text-decoration: none;
 }
 
 /*---------------------------------------------*/
