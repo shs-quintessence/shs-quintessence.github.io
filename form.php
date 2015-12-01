@@ -1,8 +1,8 @@
 <?php
 
-$name = $_GET['q1'];
-$email = $_GET['q2'];
-$next = $_GET['q3'];
+$name = $_GET['nameText'];
+$email = $_GET['emailText'];
+$next = $_GET['nextText'];
 
 echo "Welcome ".$name;
 

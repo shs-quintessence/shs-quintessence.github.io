@@ -1,5 +1,5 @@
 function openSurvey() {
-    document.getElementById('survey').style.display = "block";
+    survey.style.display = "block";
 }
 
 function formSwitch(e){
@@ -14,8 +14,8 @@ function formSwitch(e){
 
 function formSwitchCheck(e){
     if(e.keyCode === 13){
-        document.getElementById('survey').submit();
-        document.getElementById('survey').style.display = "none";
+        survey.submit();
+        survey.style.display = "none";
         //console.log(inputText[0].value, inputText[1].value, inputText[2].value);
     }
 }

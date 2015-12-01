@@ -183,7 +183,7 @@ Page specifics
     transition: bottom 1000ms ease;
 }
 
-#survey #email, #survey #next, #survey #submit {
+#survey #email, #survey #next, #survey #submitForm {
     bottom: -200%;
     transition: bottom 1000ms ease;
 }

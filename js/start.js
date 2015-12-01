@@ -19,6 +19,7 @@ var surveyRand;
 var surveyShowing;
 var surveyTaken;
 
+var survey;
 var inputInForm;
 var inputCounter;
 
@@ -53,6 +54,7 @@ function define() {
 
     surveyTaken = 0;
 
+    survey = document.getElementById('survey');
     inputInForm = [document.getElementById('name'), document.getElementById('email'), document.getElementById('next')];
     inputText = [document.getElementById('nameText'), document.getElementById('emailText'), document.getElementById('nextText')];
     inputCounter = 0;
